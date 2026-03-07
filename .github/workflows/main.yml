@@ -22,5 +22,5 @@ jobs:
       - name: Instalar o Newman
         run: npm install -g newman
         
-       - name: Rodar os testes da Collection
+      - name: Rodar os testes da Collection
         run: newman run "jsonplaceholder_api_tests.postman_collection.json"
