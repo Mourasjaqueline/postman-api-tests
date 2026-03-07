@@ -86,8 +86,7 @@ Ao executar os testes localmente com o comando:
 newman run postman/jsonplaceholder_api_tests.postman_collection.json
 
 
----
-
+```
 
 ## 📈 Estrutura do Pipeline
 O workflow do GitHub Actions segue este fluxo:
