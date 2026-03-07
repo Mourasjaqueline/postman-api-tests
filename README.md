@@ -63,6 +63,32 @@ Selecione o workflow Postman API Tests.
 Verifique o histórico de execuções e os detalhes de cada teste.
 
 
+
+## 📊 Evidências da Execução dos Testes
+
+Após a execução dos testes automatizados da API utilizando **Postman + Newman**, são geradas evidências que comprovam o resultado da execução.
+
+As evidências incluem:
+
+- Resultado da execução dos testes
+- Status das requisições
+- Validações realizadas
+- Tempo de resposta das APIs
+- Quantidade de testes executados, aprovados e falhos
+
+---
+
+## 📂 Evidências Locais
+
+Ao executar os testes localmente com o comando:
+
+```bash
+newman run postman/jsonplaceholder_api_tests.postman_collection.json
+
+
+---
+
+
 ## 📈 Estrutura do Pipeline
 O workflow do GitHub Actions segue este fluxo:
 
