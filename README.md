@@ -1,105 +1,123 @@
-# Testes Automatizados de API - JSONPlaceholder
+# 🔗 Automação de Testes de API com Postman
 
+## 📌 Sobre o Projeto
 
-Este projeto contém a automação de testes para a API pública JSONPlaceholder, desenvolvida como parte de um desafio técnico para QA. A solução utiliza Postman para a criação dos testes e GitHub Actions integrado com Newman para a execução contínua (CI).
+Este repositório contém a automação de testes para a API pública **JSONPlaceholder**, desenvolvida como parte de um desafio técnico de QA.
 
-
-# 📌 Sobre a API
-
-A API utilizada neste projeto é a: https://jsonplaceholder.typicode.com.  Ela é uma API pública usada para testes e prototipação de aplicações.
-
-## 📋 Endpoints Testados
-O projeto cobre os seguintes cenários:
-
-**POST /albums**
-
-Objetivo: Validar a criação de um novo álbum.
-
-Testes realizados: * Validação do Status Code 201.
-
-Validação do corpo da resposta (se o título enviado é o mesmo retornado).
-
-**GET /comments**
-
-**Objetivo:** Validar a listagem de comentários.
-
-**Testes realizados:**
-
-Validação do Status Code 200.
-
-Confirmação de que a resposta é um Array e contém dados.
-
-
-## 🛠️ Tecnologias Utilizadas
-
-Postman – criação dos testes de API
-
-Newman – execução das collections via CLI
-
-GitHub Actions – execução automatizada da pipeline
-
-Node.js – ambiente de execução
-
-
-## ⚙️ Como Rodar os Testes
-
-Localmente (Via Newman)
-Se você deseja rodar os testes na sua máquina, instale o Newman e execute o comando abaixo na raiz do projeto:
-
-Bash
-# Instalar o newman globalmente
-npm install -g newman
-
-# Rodar a collection
-newman run "jsonplaceholder_api_tests.postman_collection.json"
-Via GitHub Actions (CI)
-
-Este repositório está configurado para rodar os testes automaticamente em cada push ou pull_request na branch main.
-
-Vá até a aba Actions neste repositório.
-
-Selecione o workflow Postman API Tests.
-
-Verifique o histórico de execuções e os detalhes de cada teste.
-
-
-
-## 📊 Evidências da Execução dos Testes
-
-Após a execução dos testes automatizados da API utilizando **Postman + Newman**, são geradas evidências que comprovam o resultado da execução.
-
-As evidências incluem:
-
-- Resultado da execução dos testes
-- Status das requisições
-- Validações realizadas
-- Tempo de resposta das APIs
-- Quantidade de testes executados, aprovados e falhos
+Os testes foram implementados utilizando **Postman** e são executados automaticamente através do **Newman**, integrado ao **GitHub Actions** para execução contínua.
 
 ---
 
-## 📂 Evidências Locais
+## 🧪 Estratégia de Testes
 
-Ao executar os testes localmente com o comando:
+Os testes foram desenvolvidos para validar o comportamento dos principais endpoints da API.
 
-```bash
-newman run postman/jsonplaceholder_api_tests.postman_collection.json
+Os cenários implementados incluem:
 
+* Validação de criação de recursos
+* Validação de listagem de dados
+* Validação de status code das requisições
+* Verificação da integridade do corpo da resposta
+
+---
+
+## 📋 Endpoints Testados
+
+### POST /albums
+
+Objetivo: validar a criação de um novo álbum.
+
+Validações realizadas:
+
+* Status Code **201**
+* Verificação do campo **title** retornado na resposta
+
+---
+
+### GET /comments
+
+Objetivo: validar a listagem de comentários.
+
+Validações realizadas:
+
+* Status Code **200**
+* Verificação de que a resposta contém um **array de dados**
+
+---
+
+## 🛠️ Tecnologias Utilizadas
+
+* **Postman**
+* **Newman**
+* **Node.js**
+* **GitHub Actions (CI/CD)**
+
+---
+
+## 📂 Estrutura do Projeto
 
 ```
+postman
+│
+└── jsonplaceholder_api_tests.postman_collection.json
 
-## 📈 Estrutura do Pipeline
-O workflow do GitHub Actions segue este fluxo:
+.github
+└── workflows
+```
 
-**Checkout:** Baixa o código no runner do GitHub.
+---
 
-**Ambiente:** Configura o Node.js v20.
+## ⚙️ Pré-requisitos
 
-**Dependências:** Instala o Newman.
+Para executar os testes localmente é necessário possuir instalado:
 
-Execução: Roda a coleção e gera o relatório no console.
+* Node.js
+* Newman
 
+---
 
+## 🚀 Como Executar o Projeto
 
-## Autora
-Jaqueline Moura
+Instalar o Newman:
+
+```bash
+npm install -g newman
+```
+
+Executar a collection:
+
+```bash
+newman run jsonplaceholder_api_tests.postman_collection.json
+```
+
+---
+
+## 🔄 Integração Contínua (CI)
+
+Este repositório possui pipeline configurada no **GitHub Actions**.
+
+A cada **push** ou **pull request**, a pipeline executa automaticamente:
+
+1. Checkout do repositório
+2. Configuração do ambiente Node.js
+3. Instalação do Newman
+4. Execução da collection Postman
+
+---
+
+## 📊 Evidências da Execução
+
+Durante a execução da pipeline são gerados:
+
+* Resultados da execução dos testes
+* Status das requisições
+* Tempo de resposta das APIs
+* Quantidade de testes executados, aprovados e falhos
+
+Os resultados podem ser visualizados diretamente na aba **Actions** do repositório.
+
+---
+
+## 👩‍💻 Autora
+
+**Jaqueline Moura**
