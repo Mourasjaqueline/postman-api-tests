@@ -2,10 +2,11 @@
 
 ## 📌 Sobre o Projeto
 
-Este repositório contém a automação de testes para a API pública **JSONPlaceholder**, desenvolvida como parte de um desafio técnico de QA.
+Este repositório contém a automação de testes para a API pública **JSONPlaceholder**..
 
 Os testes foram implementados utilizando **Postman** e são executados automaticamente através do **Newman**, integrado ao **GitHub Actions** para execução contínua.
 
+URL: https://jsonplaceholder.typicode.com/
 ---
 
 ## 🧪 Estratégia de Testes
