@@ -74,12 +74,15 @@ postman
 
 Para executar os testes localmente é necessário possuir instalado:
 
-* Node.js
+* Node.js 18 ou superior
 * Newman
 
 ---
 
 ## 🚀 Como Executar o Projeto
+
+git clone https://github.com/Mourasjaqueline/postman-api-tests.git
+cd postman-api-tests
 
 Instalar o Newman:
 
@@ -90,8 +93,20 @@ npm install -g newman
 Executar a collection:
 
 ```bash
-newman run jsonplaceholder_api_tests.postman_collection.json
+newman run postman/jsonplaceholder_api_tests.postman_collection.json
 ```
+
+Após a execução da pipeline, o relatório HTML pode ser baixado na aba:
+
+Actions → Execução da Pipeline → Artifacts → Download report
+
+Exemplo de execução:
+
+✔ 2 requests
+
+✔ 4 assertions
+
+✔ 0 failures
 
 ---
 
